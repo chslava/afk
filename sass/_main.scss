@@ -1,4 +1,4 @@
-@import "variables";
+@import "components/variables";
 @import "fonts";
 
 // Helpers
@@ -26,7 +26,7 @@ h1 {
 .header {
   height: $header-hight;
   width: 100%;
-  background-color: $bc-blue;
+  background-color: $primary-color;
   padding-top: 13px;
   padding-bottom: 13px;
   div {height: 100%;}
@@ -50,7 +50,7 @@ h1 {
     button {
       width: 10%;
       border-radius: 0 $border-rad $border-rad 0;
-      background: $bc-orange url("../img/search.svg") no-repeat center;
+      background: color("afk", "orange") url("../img/search.svg") no-repeat center;
     }
   }
   img {height: 100%;}

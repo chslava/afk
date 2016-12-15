@@ -337,6 +337,16 @@ $shades: (
   "transparent":  transparent
 );
 
+$afk: (
+        "blue": #00aaf2,
+        "light-blue": #5ccdff,
+        "extra-light-blue": #cbe8fb,
+        "orange": #ffb819,
+        "magento": #ea1d76,
+        "light-green": #c4d600,
+        "gray": #4d4d4d
+);
+
 $colors: (
   "materialize-red": $materialize-red,
   "red": $red,
@@ -358,7 +368,8 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
+  "afk": $afk
 );
 
 

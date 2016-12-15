@@ -5,6 +5,7 @@
 // Table of Contents:
 //
 //  1. Colors
+//  1.1 Fonts
 //  2. Badges
 //  3. Buttons
 //  4. Cards
@@ -29,11 +30,11 @@
 //  24. Progress Bar
 
 
-
+@import "color";
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color: color("afk", "blue") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
@@ -42,6 +43,20 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
+$plain-text-color: color("afk", "gray");
+$ligth-text-color: #ffffff;
+$label1-text-color: color("afk", "blue");
+$label2-text-color: color("afk", "light-blue");
+$label3-text-color: color("afk", "extra-light-blue");
+$label4-text-color: color("afk", "orange");
+$label5-text-color: color("afk", "magento");
+$label6-text-color: color("afk", "light-green");
+
+// 1.1 Fonts
+// =============================================
+
+$font-base: Arial, Helvetica, Verdana, sans-serif;
+$font-h1: "Circe Rounded Extra Bold", Helvetica, Verdana, sans-serif;
 
 // 2. Badges
 // ==========================================================================
@@ -216,10 +231,11 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 64px !default;
-$navbar-height-mobile: 56px !default;
-$navbar-font-size: 1rem !default;
-$navbar-font-color: #fff !default;
+$navbar-height: 42px !default;
+$navbar-height-mobile: 42px !default;
+$navbar-font: $font-base;
+$navbar-font-size: 0.87rem !default;
+$navbar-font-color: color("afk", "light-blue") !default;
 $navbar-brand-font-size: 2.1rem !default;
 
 // 14. Side Navigation
@@ -311,3 +327,16 @@ $collection-link-color: $secondary-color !default;
 // ==========================================================================
 
 $progress-bar-color: $secondary-color !default;
+
+
+
+
+
+
+
+
+// =============================================
+// Dimensions
+// =============================================
+$header-hight: 64px;
+$border-rad: 3px;

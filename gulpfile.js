@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
+var plumber = require('gulp-plumber');
 
 
 var sassOptions = {
@@ -40,6 +41,7 @@ gulp.task('watch', function() {
 gulp.task('sass', function () {
     return gulp
         .src(input)
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(sourcemaps.write())
