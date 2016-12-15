@@ -1,0 +1,9 @@
+@mixin font-face($name, $path: '../fonts/') {
+  @font-face {
+    font-family: quote($name);
+    src: url(quote($path + $name + '.eot'));
+    src: url(quote($path + $name + '.woff')) format('woff'), url(quote($path + $name + '.ttf')) format('truetype'), url(quote($path + $name + '.svg')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

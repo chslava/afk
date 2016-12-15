@@ -1,0 +1,22 @@
+{
+  "name": "frontools",
+  "author": {
+    "name": "Vyacheslav Chuyan",
+    "email": "chslavamail@gmail.com"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "~6.5.3",
+    "browser-sync": "~2.18.2",
+    "gulp": "~3.9.1",
+    "gulp-concat": "~2.6.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "~2.3.2",
+    "gulp-sourcemaps": "~2.2.0"
+  }
+}

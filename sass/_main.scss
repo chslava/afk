@@ -1,0 +1,70 @@
+@import "variables";
+@import "fonts";
+
+// Helpers
+.v-split:after {
+  content:"|";
+  padding: 0 8px;
+}
+
+//Typography
+h1 {
+  display: inline-block;
+  font-family: $font-h1;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.header-top {
+  height: 33px;
+  color: $label1-text-color;
+  font-size: 15px;
+  text-align: left;
+  span{line-height: 33px;}
+}
+
+.header {
+  height: $header-hight;
+  width: 100%;
+  background-color: $bc-blue;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  div {height: 100%;}
+  h1 {color: $label3-text-color;}
+  .input-field.search {
+    margin: 0;
+     & input , button{
+        height: 38px;
+        margin: 0;
+        border: none;
+        box-sizing: border-box;
+       float: left;
+    }
+    & input:focus{border: none;}
+    input {
+      width: 90%;
+      padding-left: 15px;
+      background-color: #ffffff;
+      border-radius: $border-rad 0 0 $border-rad;
+    }
+    button {
+      width: 10%;
+      border-radius: 0 $border-rad $border-rad 0;
+      background: $bc-orange url("../img/search.svg") no-repeat center;
+    }
+  }
+  img {height: 100%;}
+  .login {
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    font-size: 0.87rem;
+
+    & , a{color: #ffffff; font-weight: 600;}
+    & img, a{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.logo { display: inline-block; }
