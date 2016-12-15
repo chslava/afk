@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles/css/style.css">
     <link rel="stylesheet" type="text/css" href="styles/css/materialize.css">
+
 </head>
 <body>
 <div class="container">
@@ -41,15 +42,51 @@
         </div>
     </div>
 </div>
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">Logo</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+
+<nav id="top-nav">
+    <div class="nav-wrapper container">
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-button btn left' href='#'
+           data-activates='catalog-0'
+           data-constrainwidth="false"
+           data-beloworigin="true"
+           data-hover="true"
+           data-alignment="left" >
+            <i class="icon-menu"></i><span>Каталог товаров</span>
+        </a>
+        <ul id='catalog-0' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <!-- Left nav -->
+        <ul class="top-menu right hide-on-med-and-down">
+            <li><a class="color-1" href="#"><i class="icon-thumbs-up-alt"></i>Хиты</a></li>
+            <li><a class="color-2" href="#"><i class="icon-tags-1"></i>Акции</a></li>
+            <li><a class="color-3" href="#"><i class="icon-fire-2"></i>Новые поступления</a></li>
+            <li><a class="color-4" href="#"><i class="icon-truck-1"></i>Транзит</a></li>
         </ul>
     </div>
 </nav>
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bin/materialize.js"></script>
+<script type="text/javascript">
+    $(document).on('ready', function(){
+        $('.button-collapse').sideNav({
+                    menuWidth: 300, // Default is 240
+                    edge: 'left', // Choose the horizontal origin
+                    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                    draggable: true // Choose whether you can drag to open on touch screens
+                }
+        );
+
+        $('.dropdown-button').dropdown();
+    });
+</script>
 </body>
 </html>

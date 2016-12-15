@@ -1,11 +1,15 @@
 @import "components/variables";
 @import "fonts";
-
+@import "components/color";
 // Helpers
 .v-split:after {
   content:"|";
   padding: 0 8px;
 }
+.color-1 {color: color("afk", "magento");}
+.color-2 {color: color("afk", "orange");}
+.color-3 {color: color("afk", "light-green");}
+.color-4 {color: color("afk", "light-blue");}
 
 //Typography
 h1 {
@@ -20,6 +24,7 @@ h1 {
   color: $label1-text-color;
   font-size: 15px;
   text-align: left;
+  padding: 0 1.333rem;
   span{line-height: 33px;}
 }
 
@@ -29,6 +34,7 @@ h1 {
   background-color: $primary-color;
   padding-top: 13px;
   padding-bottom: 13px;
+  .container{padding: 0 1.333rem;}
   div {height: 100%;}
   h1 {color: $label3-text-color;}
   .input-field.search {
@@ -68,3 +74,43 @@ h1 {
 }
 
 .logo { display: inline-block; }
+#top-nav{
+  border-bottom: 1px solid color("afk", "orange");
+  i{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .btn{
+    span{display: inline-block; vertical-align: middle; margin-left: 1rem;}
+    position: relative;
+    border-radius: 0;
+    height: 100%;
+    background: none;
+    color: color("afk", "blue");
+    font-size: 0.87rem;
+    box-shadow: none;
+    padding: 0 1.13rem;
+    &:hover, &.active {
+      background-color: color("afk", "blue");
+      color: #ffffff;
+      &:after{
+        content:"";
+        height: 1px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        background-color: color("afk", "blue");
+      }
+    }
+  }
+
+  .dropdown-content{
+    width: 100%;
+    margin-top: 1px;
+  }
+
+  .top-menu.right{
+    a > i{font-size: 1rem;}
+  }
+}
