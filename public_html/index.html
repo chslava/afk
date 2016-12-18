@@ -21,12 +21,10 @@
     <div class="container">
         <div class="row">
             <div class="col s6">
-                <div class="row">
-                    <div class="col s2 logo"><img src="styles/img/AFK_Logo@2x.png" alt=""></div>
-                    <div class="col s10 center-align"><h1>Оптовый магазин детских товаров</h1></div>
-                </div>
+                <img class="left" src="styles/img/AFK_Logo@2x.png" alt="">
+                <div class="title"><h1>Оптовый магазин детских товаров</h1></div>
             </div>
-            <div class="col s4">
+            <div class="col s3 m3 l4">
                 <form action="">
                     <div class="input-field search">
                         <input name="search" placeholder="Я ищу..." id="header-search" type="text" class="">
@@ -34,7 +32,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col s2 login">
+            <div class="col s3 m3 l2 login">
                 <img src="styles/img/man.svg" alt="">
                 <a href="#">Вход</a>
                 <i class="v-split"></i><a href="#">Регистрация</a>
@@ -47,18 +45,76 @@
     <div class="nav-wrapper container">
         <!-- Dropdown Trigger -->
         <a class='dropdown-button btn left' href='#'
-           data-activates='catalog-0'
+           data-activates="catalog-0"
+           data-fullwidth="true"
            data-constrainwidth="false"
            data-beloworigin="true"
            data-hover="true"
            data-alignment="left" >
-            <i class="icon-menu"></i><span>Каталог товаров</span>
+            <i class="icon-menu"></i><i class="icon-down-open-1"></i><span>Каталог товаров</span>
         </a>
         <ul id='catalog-0' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
+            <div class="container container-flex">
+                <div class="col s10 menu-left">
+                    <div class="row">
+                        <div class="col s3">
+                            <ul class="level-1">
+                                <li><a href="#!">Аксессуары к автокреслам</a></li>
+                                <li><a href="#!">Беговелы</a></li>
+                                <li><a href="#!">Детская сборная мебель</a></li>
+                                <li><a href="#!">Детские автокресла</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s3">
+                            <ul class="level-1">
+                                <li><a href="#!">Детские конструкторы</a></li>
+                                <li><a href="#!">Детские манежи</a></li>
+                                <li><a href="#!">Детские машинки, транспорт</a></li>
+                                <li><a href="#!">Игровые наборы</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s3">
+                            <ul class="level-1">
+                                <li><a href="#!">Игровые центры</a></li>
+                                <li><a href="#!">Игрушки музыкальные</a></li>
+                                <li><a href="#!">Качалки</a></li>
+                                <li><a href="#!">Кубики, пирамидки</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s3">
+                            <ul class="level-1">
+                                <li><a href="#!">Лабиринты</a></li>
+                                <li><a href="#!">Наборы для обучения</a></li>
+                                <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                                <li><a href="#!">Погремушки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2 menu-right">
+                    <div class="row">
+                        <div class="col s12"><div class="title">Производители</div><i class="icon-cancel" onclick="jQuery('.dropdown-button').dropdown('close');"></i></div>
+                        <div class="col s6">
+                            <ul class="level-1">
+                                <li><a href="#!">Лабиринты</a></li>
+                                <li><a href="#!">Наборы для обучения</a></li>
+                                <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                                <li><a href="#!">Погремушки</a></li>
+                            </ul>
+                        </div>
+                        <div class="col s6">
+                            <ul class="level-1">
+                                <li><a href="#!">Лабиринты</a></li>
+                                <li><a href="#!">Наборы для обучения</a></li>
+                                <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                                <li><a href="#!">Погремушки</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </ul>
         <!-- Left nav -->
         <ul class="top-menu right hide-on-med-and-down">
@@ -69,7 +125,6 @@
         </ul>
     </div>
 </nav>
-
 
 
 

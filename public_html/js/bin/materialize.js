@@ -584,6 +584,8 @@ if (jQuery) {
           curr_options.alignment = origin.data('alignment');
         if (origin.data('stoppropagation') !== undefined)
           curr_options.stopPropagation = origin.data('stoppropagation');
+        if (origin.data('fullwidth') !== undefined)
+          curr_options.fullWidth = origin.data('fullwidth');
       }
 
       updateOptions();
@@ -680,11 +682,23 @@ if (jQuery) {
         }
 
         // Position dropdown
-        activates.css({
-          position: 'absolute',
-          top: origin.position().top + verticalOffset + scrollYOffset,
-          left: leftPosition + scrollXOffset
-        });
+        var activatesOptions;
+        if (curr_options.fullWidth) {
+            activatesOptions = {
+                position: 'absolute',
+                top: origin.position().top + verticalOffset + scrollYOffset,
+                left: -offsetLeft,
+                width: window.innerWidth
+            };
+        } else {
+            activatesOptions = {
+                position: 'absolute',
+                top: origin.position().top + verticalOffset + scrollYOffset,
+                left: leftPosition + scrollXOffset
+            };
+        }
+          activates.css(activatesOptions);
+
 
 
         // Show dropdown

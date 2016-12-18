@@ -6,6 +6,11 @@
   content:"|";
   padding: 0 8px;
 }
+
+.container-flex{
+  display: flex;
+  justify-content: flex-start;
+}
 .color-1 {color: color("afk", "magento");}
 .color-2 {color: color("afk", "orange");}
 .color-3 {color: color("afk", "light-green");}
@@ -36,7 +41,19 @@ h1 {
   padding-bottom: 13px;
   .container{padding: 0 1.333rem;}
   div {height: 100%;}
-  h1 {color: $label3-text-color;}
+  .title{
+    padding-left: 0.75rem;
+    overflow: hidden;
+    margin: -13px 0;
+    height: $header-hight;
+    line-height: $header-hight;
+  }
+  h1 {
+    color: $label3-text-color;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.75rem;
+  }
   .input-field.search {
     margin: 0;
      & input , button{
@@ -64,6 +81,7 @@ h1 {
     padding-top: 7px !important;
     padding-bottom: 7px !important;
     font-size: 0.87rem;
+    text-align: right;
 
     & , a{color: #ffffff; font-weight: 600;}
     & img, a{
@@ -73,14 +91,14 @@ h1 {
   }
 }
 
-.logo { display: inline-block; }
+.logo { display: inline-block;}
 #top-nav{
   border-bottom: 1px solid color("afk", "orange");
   i{
     display: inline-block;
     vertical-align: middle;
   }
-  .btn{
+  .dropdown-button.btn{
     span{display: inline-block; vertical-align: middle; margin-left: 1rem;}
     position: relative;
     border-radius: 0;
@@ -91,7 +109,7 @@ h1 {
     box-shadow: none;
     padding: 0 1.13rem;
     &:hover, &.active {
-      background-color: color("afk", "blue");
+      background-color: color("afk", "light-blue");
       color: #ffffff;
       &:after{
         content:"";
@@ -100,14 +118,68 @@ h1 {
         left: 0;
         right: 0;
         bottom: -1px;
-        background-color: color("afk", "blue");
+        background-color: color("afk", "light-blue");
       }
+      .icon-down-open-1{display: inline-block;}
+      .icon-menu{display: none;}
     }
+    i{width: 1.5rem;}
+    .icon-down-open-1{font-size: 1rem; display: none;}
+
   }
 
   .dropdown-content{
     width: 100%;
     margin-top: 1px;
+
+    .menu-left, .menu-right {padding-top: 15px;}
+    .menu-left {
+      width: 70%;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-right: 1px dotted color("afk", "light-grey");
+        top: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .menu-right {
+      width: 30%;
+      position: relative;
+
+      .title{
+        color: color("afk", "blue");
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 14px 16px;
+        line-height: 22px;
+      }
+
+      .icon-cancel {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: color("afk", "light-grey");
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    li {
+      min-height: 35px;
+      &>a{
+        color: color("afk", "grey");
+        font-size: 1rem;
+        font-weight: normal;
+        white-space: normal;
+      }
+    }
   }
 
   .top-menu.right{
