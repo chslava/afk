@@ -1,26 +1,28 @@
 .container {
   margin: 0 auto;
-  //max-width: 1280px;
-  width: 90%;
+  max-width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  //width: 90%;
 }
-@media #{$medium-and-up} {
+@media #{$small-and-up} {
   .container {
     max-width: 750px;
   }
 }
-@media #{$large-and-up} {
+@media #{$medium-and-up} {
   .container {
     max-width: 970px;
   }
 }
-@media #{$extra-large-and-up} {
+@media #{$large-and-up} {
   .container {
     max-width: 1170px;
   }
 }
 .container .row {
-  margin-left: (-1 * $gutter-width / 2);
-  margin-right: (-1 * $gutter-width / 2);
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .section {
@@ -53,7 +55,7 @@
   .col {
     float: left;
     box-sizing: border-box;
-    padding: 0 $gutter-width / 2;
+    padding: 0 15px;
     min-height: 1px;
 
     &[class*="push-"],
@@ -64,7 +66,7 @@
     $i: 1;
     @while $i <= $num-cols {
       $perc: unquote((100 / ($num-cols / $i)) + "%");
-      &.s#{$i} {
+      &.xs#{$i} {
         width: $perc;
         margin-left: auto;
         left: auto;
@@ -76,16 +78,45 @@
     $i: 1;
     @while $i <= $num-cols {
       $perc: unquote((100 / ($num-cols / $i)) + "%");
-      &.offset-s#{$i} {
+      &.offset-xs#{$i} {
         margin-left: $perc;
       }
-      &.pull-s#{$i} {
+      &.pull-xs#{$i} {
         right: $perc;
       }
-      &.push-s#{$i} {
+      &.push-xs#{$i} {
         left: $perc;
       }
       $i: $i + 1;
+    }
+    @media #{$small-and-up} {
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.s#{$i} {
+          width: $perc;
+          margin-left: auto;
+          left: auto;
+          right: auto;
+        }
+        $i: $i + 1
+      }
+
+      $i: 1;
+      @while $i <= $num-cols {
+        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        &.offset-s#{$i} {
+          margin-left: $perc;
+        }
+        &.pull-s#{$i} {
+          right: $perc;
+        }
+        &.push-s#{$i} {
+          left: $perc;
+        }
+        $i: $i + 1;
+      }
     }
 
     @media #{$medium-and-up} {
@@ -147,5 +178,6 @@
         $i: $i + 1;
       }
     }
+
   }
 }
