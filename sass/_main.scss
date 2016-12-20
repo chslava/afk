@@ -30,6 +30,15 @@ h1 {
   font-size: 15px;
   text-align: left;
   span{line-height: 33px;}
+  @media only screen and (max-width: 601px) {
+    font-size: 0.867rem;
+    font-weight: normal;
+  }
+  & .col > span:last-child{
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+  }
 }
 
 .header {
@@ -63,6 +72,9 @@ h1 {
   }
   .input-field.search {
     margin: 0;
+    @media only screen and (max-width: 601px) {
+      position: static;
+    }
      & input , button{
         height: 38px;
         margin: 0;
@@ -93,8 +105,11 @@ h1 {
         background-color: transparent;
         height: 38px;
         position: absolute;
-        right: 45px;
-        top: -21px;
+        right: 210px;
+        top: 12px;
+      }
+      @media only screen and (max-width: 380px) {
+        right: 90px;
       }
     }
   }
@@ -105,14 +120,28 @@ h1 {
     font-size: 0.87rem;
     text-align: right;
 
-    & , a{color: #ffffff; font-weight: 600;}
+    & , a{
+      color: #ffffff;
+      font-weight: 600;
+    }
     & img, a{
       display: inline-block;
       vertical-align: middle;
     }
+    > span {
+      @media only screen and (max-width: 380px) {
+        display: none;
+      }
+    }
+    .icon-down-open-1:before {
+      display: none;
+      @media only screen and (max-width: 380px) {
+        display: inline-block;
+      }
+    }
     @media only screen and (max-width: 601px) {
       height: 38px;
-      width: 185px !important;
+      width: 190px !important;
       position: absolute;
       right: 15px !important;
       top: 12px;
@@ -153,12 +182,15 @@ h1 {
     }
     i{width: 1.5rem;}
     .icon-down-open-1{font-size: 1rem; display: none;}
-
   }
 
   .dropdown-content{
     width: 100%;
     margin-top: 1px;
+
+    @media only screen and (max-width: 480px) {
+      width: 85% !important;
+    }
 
     .container-flex{
       @media #{$small-and-down} {
@@ -179,6 +211,15 @@ h1 {
         bottom: 0;
         right: 0;
       }
+      .icon-cancel{
+        display: none;
+        @media only screen and (max-width: 480px) {
+          width: 15%;
+          color: #ffffff;
+          background-color: color("afk", "grey");
+
+        }
+      }
       @media #{$small-and-down} {
         width: 100%;
         border-bottom: 1px dotted color("afk", "light-grey");
@@ -186,9 +227,7 @@ h1 {
           display: none;
         }
       }
-      .icon-cancel{
-        display: none;
-      }
+
     }
 
     .menu-right {

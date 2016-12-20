@@ -3,6 +3,11 @@
   max-width: 1280px;
   padding-left: 15px;
   padding-right: 15px;
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
   //width: 90%;
 }
 @media #{$small-and-up} {
@@ -44,9 +49,10 @@
 .row {
   margin-left: auto;
   margin-right: auto;
+  //margin-bottom: 20px;
 
   // Clear floating children
-  &:after {
+  &:before {
     content: "";
     display: table;
     clear: both;
