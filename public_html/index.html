@@ -56,6 +56,7 @@
                data-alignment="left" >
                 <i class="icon-menu"></i><i class="icon-down-open-1"></i><span>Каталог товаров</span>
             </a>
+
             <ul id='catalog-0' class='dropdown-content'>
                 <div class="container  container-flex">
                     <div class="menu-left"><i class="icon-cancel show-on-small" onclick="jQuery('.dropdown-button').dropdown('close');"></i>
@@ -120,6 +121,44 @@
                     </div>
                 </div>
             </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse btn"><i class="icon-menu"></i><i class="icon-down-open-1"></i><span>Каталог товаров</span></a>
+            <div id="slide-out" class="side-nav">
+                <div class="slide-nav-menu">
+                    <div class="btn"><i class="icon-down-open-1"></i><span>Каталог товаров</span></div>
+                    <a href="#" class="icon-cancel"></a>
+                </div>
+                <div class="menu-content">
+                    <ul class="level-1">
+                        <li><a href="#!">Аксессуары к автокреслам</a></li>
+                        <li><a href="#!">Беговелы</a></li>
+                        <li><a href="#!">Детская сборная мебель</a></li>
+                        <li><a href="#!">Детские автокресла</a></li>
+                        <li><a href="#!">Игровые центры</a></li>
+                        <li><a href="#!">Игрушки музыкальные</a></li>
+                        <li><a href="#!">Качалки</a></li>
+                        <li><a href="#!">Кубики, пирамидки</a></li>
+                        <li><a href="#!">Детские конструкторы</a></li>
+                        <li><a href="#!">Детские манежи</a></li>
+                        <li><a href="#!">Детские машинки, транспорт</a></li>
+                        <li><a href="#!">Игровые наборы</a></li>
+                        <li><a href="#!">Лабиринты</a></li>
+                        <li><a href="#!">Наборы для обучения</a></li>
+                        <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                        <li><a href="#!">Погремушки</a></li>
+                    </ul>
+                    <div class="title">Производители</div>
+                    <ul class="level-1">
+                        <li><a href="#!">Лабиринты</a></li>
+                        <li><a href="#!">Наборы для обучения</a></li>
+                        <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                        <li><a href="#!">Погремушки</a></li>
+                        <li><a href="#!">Лабиринты</a></li>
+                        <li><a href="#!">Наборы для обучения</a></li>
+                        <li><a href="#!">Пазлы, рамки-вкладыши</a></li>
+                        <li><a href="#!">Погремушки</a></li>
+                    </ul>
+                </div>
+            </div>
             <!-- Left nav -->
             <ul class="top-menu right">
                 <li><a class="color-1" href="#"><i class="icon-thumbs-up-alt"></i><span>Хиты</span></a></li>
@@ -132,39 +171,19 @@
 </nav>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col xs3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col xs3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col xs3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col xs3" style="background-color: #0f9d58; height: 50px;"></div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col s3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col s3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col s3" style="background-color: #0f9d58; height: 50px;"></div>
-        <div class="col s3" style="background-color: #0f9d58; height: 50px;"></div>
-    </div>
-</div>
-
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 <script type="text/javascript" src="js/bin/materialize.js"></script>
 <script type="text/javascript">
     $(document).on('ready', function(){
         $('.button-collapse').sideNav({
-                    menuWidth: 300, // Default is 240
                     edge: 'left', // Choose the horizontal origin
                     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
                     draggable: true // Choose whether you can drag to open on touch screens
                 }
         );
-
-        $('.dropdown-button').dropdown();
     });
 </script>
 </body>
