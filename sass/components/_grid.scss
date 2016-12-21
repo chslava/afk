@@ -8,6 +8,11 @@
     display: table;
     clear: both;
   }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   //width: 90%;
 }
 @media #{$small-and-up} {
@@ -52,7 +57,7 @@
   //margin-bottom: 20px;
 
   // Clear floating children
-  &:before {
+  &:after {
     content: "";
     display: table;
     clear: both;

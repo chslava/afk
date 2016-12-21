@@ -164,17 +164,63 @@
                 <li><a class="color-1" href="#"><i class="icon-thumbs-up-alt"></i><span>Хиты</span></a></li>
                 <li><a class="color-2" href="#"><i class="icon-tags-1"></i><span>Акции</span></a></li>
                 <li><a class="color-3" href="#"><i class="icon-fire-2"></i><span>Новые поступления</span></a></li>
-                <li><a class="color-4" href="#"><i class="icon-truck-1"></i><span>Транзит</span></a></li>
+                <li><a class="color-5" href="#"><i class="icon-truck-1"></i><span>Транзит</span></a></li>
             </ul>
         </div>
     </div>
 </nav>
+<div class="content">
+    <div class="banner-main">
+        <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="media/banners/TopBaner-100.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="media/banners/TopBaner-100.jpg"></a>
+            <a class="carousel-item" href="#one!"><img src="media/banners/TopBaner-100.jpg"></a>
+        </div>
+        <div class="banner-title">
+            <div class="container">
+                <div class="logo"><img src="styles/img/AFK_Logo@2x.png" alt=""></div>
+                <div class="divider"></div>
+                <h1>Дистрибьюция детских товаров</h1>
+            </div>
 
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col xs12">
+                <article>
+                    <h1 class="color-3">Приглашение к сотрудничеству</h1>
+                    <div>
+                        <p>Если вы планируете начать свой бизнес, связанный с торговлей товарами для детей, или уже успешно его ведете, позвольте стать Вашим надежным деловым партнером.<br /><br />
+                            Наша цель – долгосрочное и взаимовыгодное сотрудничество, построенное на понятных и честных правилах.<br /><br />
+                            Одинаковых магазинов не бывает, поэтому мы будем стараться принимать во внимание индивидуальность каждого нашего партнера.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="offers container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col xs12">
+                    <article>
+                        <h1 class="color-2">Наши предложения и сервисы</h1>
+                        <div class="row">
+                            <div class="col s3"><div class="sticker bg-color-3 z-depth-1"><img src="media/buy1.svg" alt=""></div></div>
+                            <div class="col s3"><div class="sticker bg-color-4 z-depth-1"><img src="media/DropShipping.svg" alt=""></div></div>
+                            <div class="col s3"><div class="sticker bg-color-1 z-depth-1"><img src="media/back.svg" alt=""></div></div>
+                            <div class="col s3"><div class="sticker bg-color-2 z-depth-1"><img src="media/obmen.svg" alt=""></div></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 <script type="text/javascript" src="js/bin/materialize.js"></script>
 <script type="text/javascript">
     $(document).on('ready', function(){
@@ -184,6 +230,7 @@
                     draggable: true // Choose whether you can drag to open on touch screens
                 }
         );
+        $('.carousel.carousel-slider').carousel({full_width: true});
     });
 </script>
 </body>

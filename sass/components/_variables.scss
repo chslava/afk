@@ -31,6 +31,8 @@
 
 
 @import "color";
+@import "../fonts";
+
 // 1. Colors
 // ==========================================================================
 
@@ -56,7 +58,14 @@ $label6-text-color: color("afk", "light-green");
 // =============================================
 
 $font-base: Arial, Helvetica, Verdana, sans-serif;
-$font-h1: "Circe Rounded Extra Bold", Helvetica, Verdana, sans-serif;
+$font-1: "Circe Rounded Alt Extra Bold", Helvetica, Verdana, sans-serif;
+$font-2: "Circe Rounded Extra Bold", Helvetica, Verdana, sans-serif;
+$font-3: "Circe Rounded Extra Light", Helvetica, Verdana, sans-serif;
+$font-4: "Circe Rounded Alt Bold", Helvetica, Verdana, sans-serif;
+$font-5: "Circe Rounded Bold", Helvetica, Verdana, sans-serif;
+$font-6: "Circe Rounded Light", Helvetica, Verdana, sans-serif;
+$font-7: "Circe Rounded Thin", Helvetica, Verdana, sans-serif;
+$font-8: "Circe Rounded", Helvetica, Verdana, sans-serif;
 
 // 2. Badges
 // ==========================================================================
