@@ -30,6 +30,7 @@
   border-radius: 4px;
   height: 168px;
   max-width: 231px;
+  min-width: 168px;
   width: 100%;
   text-align: center;
   padding: 1rem;
@@ -414,4 +415,9 @@ article {
   background-color: color("afk", "extra-light-grey");
   h1{margin-bottom: 1.2rem;}
 }
-
+.carousel-item{
+  div{
+    height: 100%;
+    background-size: cover;
+  }
+}
