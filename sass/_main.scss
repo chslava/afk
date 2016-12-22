@@ -23,18 +23,16 @@
 }
 .container-flex{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .sticker {
   display: inline-block;
   border-radius: 4px;
-  height: 168px;
-  max-width: 231px;
-  min-width: 168px;
-  width: 100%;
   text-align: center;
   padding: 1rem;
-  margin: 5px;
+  margin: 10px;
+  flex-grow: 1;
   img {max-height: 100%;}
 }
 .color-1 {color: color("afk", "magento");}
@@ -64,6 +62,7 @@ article {
     color: color("afk", "grey");
     font-size: 1rem;
   }
+  .wrapper{padding: 0 10%;}
 }
 
 .header-top {
@@ -398,26 +397,67 @@ article {
     right: 0;
     top: 0;
     text-align: center;
-    padding-top: 3.7rem;
+    padding: 3.7rem 15% 0;
     pointer-events: none;
+    @media only screen and (max-width: 480px) {
+      padding: 0;
+      height: 90px;
+      top: 30%;
+    }
   }
   .logo{
     display: inline-block;
     margin-bottom: 3rem;
+    vertical-align: middle;
+    @media only screen and (max-width: 480px) {
+      width: 48%;
+      margin: 0;
+      padding: 19px 10px 0 0;
+    }
+    img{max-width: 100%;}
   }
   h1{
     margin-top: 2.33rem;
     font-size: 2.07rem;
     font-family: $font-5;
+    vertical-align: middle;
+    @media only screen and (max-width: 480px) {
+      width: 48%;
+      margin: 0;
+      font-size: 1.33rem;
+      padding-left: 10px;
+    }
+  }
+  .divider{
+    @media only screen and (max-width: 480px) {
+      position: absolute;
+      display: inline-block;
+      height: auto;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .carousel-item{
+    div{
+      height: 100%;
+      background-size: cover;
+    }
   }
 }
 .offers {
   background-color: color("afk", "extra-light-grey");
+  article {padding-top: 25px;}
   h1{margin-bottom: 1.2rem;}
-}
-.carousel-item{
-  div{
-    height: 100%;
-    background-size: cover;
+  .sticker{
+    height: 168px;
+    width: 22%;
+    @media #{$medium-and-down} {
+      width: 42%;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
+
