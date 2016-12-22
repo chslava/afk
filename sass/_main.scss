@@ -89,13 +89,22 @@ article {
   background-color: $primary-color;
   padding-top: 13px;
   padding-bottom: 13px;
+  @media only screen and (min-width: 320px) {
+    height: $header-hight-mobile;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
   div {height: 100%;}
   .logo{
-    @media only screen and (max-width: 601px) {
+    @media only screen and (min-width: 481px) {
       height: 38px;
+
+    }
+    @media only screen and (max-width: 480px) {
+      height: 34px;
       position: absolute;
       left: 15px !important;
-      top: 12px;
+      top: 9px;
     }
   }
   .title{
@@ -142,15 +151,22 @@ article {
       border-radius: 0 $border-rad $border-rad 0;
       background: color("afk", "orange") url("../img/search.svg") no-repeat center center;
       background-size: 140%;
+
       @media only screen and (max-width: 601px) {
         background-color: transparent;
-        height: 38px;
         position: absolute;
+        height: 38px;
         right: 210px;
         top: 12px;
       }
+      @media only screen and (max-width: 480px) {
+        height: 34px;
+        right: 210px;
+        top: 9px;
+      }
       @media only screen and (max-width: 380px) {
         right: 90px;
+        top: 9px;
       }
     }
   }
