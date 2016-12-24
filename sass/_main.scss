@@ -2,6 +2,7 @@
 @import "fonts";
 @import "components/color";
 // Helpers
+.relative {position: relative;}
 .v-split:after {
   content:"|";
   padding: 0 8px;
@@ -65,6 +66,7 @@ article {
   .wrapper{padding: 0 10%;}
 }
 
+//----------------- HEADER TOP-------------------//
 .header-top {
   height: 33px;
   color: $label1-text-color;
@@ -81,7 +83,7 @@ article {
     }
   }
 }
-
+//----------------- HEADER -------------------//
 .header {
   position: relative;
   height: $header-hight;
@@ -89,7 +91,7 @@ article {
   background-color: $primary-color;
   padding-top: 13px;
   padding-bottom: 13px;
-  @media only screen and (min-width: 320px) {
+  @media only screen and (max-width: 481px) {
     height: $header-hight-mobile;
     padding-top: 9px;
     padding-bottom: 9px;
@@ -104,7 +106,6 @@ article {
       height: 34px;
       position: absolute;
       left: 15px !important;
-      top: 9px;
     }
   }
   .title{
@@ -112,13 +113,14 @@ article {
     overflow: hidden;
     margin: -13px 0;
     height: $header-hight;
-    line-height: $header-hight;
   }
   h1 {
+    display: table-cell;
+    vertical-align: middle;
+    height: $header-hight;
     color: $label3-text-color;
     width: 100%;
     text-align: center;
-    margin-top: 0.75rem;
   }
   .input-field.search {
     margin: 0;
@@ -126,7 +128,7 @@ article {
       position: static;
     }
      & input , button{
-        height: 38px;
+        height: 37px;
         margin: 0;
         border: none;
         box-sizing: border-box;
@@ -139,7 +141,7 @@ article {
       padding-right: 36px;
       background-color: #ffffff;
       border-radius: $border-rad;
-      @media only screen and (max-width: 601px) {
+      @media only screen and (max-width: 480px) {
         display: none;
       }
     }
@@ -152,26 +154,31 @@ article {
       background: color("afk", "orange") url("../img/search.svg") no-repeat center center;
       background-size: 140%;
 
-      @media only screen and (max-width: 601px) {
+      @media only screen and (max-width: 480px) {
         background-color: transparent;
         position: absolute;
-        height: 38px;
-        right: 210px;
-        top: 12px;
-      }
-      @media only screen and (max-width: 480px) {
         height: 34px;
-        right: 210px;
-        top: 9px;
-      }
-      @media only screen and (max-width: 380px) {
-        right: 90px;
-        top: 9px;
       }
     }
   }
   img {height: 100%;}
+  form{
+    position: absolute;
+    right: 195px;
+    left: 140px;
+    @media #{$medium-and-up} {
+      left: auto;
+      width: 38%;
+    }
+    @media only screen and (max-width: 380px) {
+      left: auto;
+      right: 75px;
+    }
+  }
   .login {
+    position: absolute;
+    right: 15px;
+    width: 165px;
     padding-top: 7px !important;
     padding-bottom: 7px !important;
     font-size: 0.87rem;
@@ -198,14 +205,12 @@ article {
     }
     @media only screen and (max-width: 601px) {
       height: 38px;
-      width: 190px !important;
-      position: absolute;
       right: 15px !important;
-      top: 12px;
+      top: 0;
     }
   }
 }
-
+//----------------- TOP MENU -------------------//
 #top-nav{
   border-bottom: 1px solid color("afk", "orange");
   i{
@@ -213,7 +218,6 @@ article {
     vertical-align: middle;
   }
   .dropdown-button.btn, & .button-collapse.btn{
-    span{display: inline-block; vertical-align: middle; margin-left: 1rem;}
     position: relative;
     border-radius: 0;
     height: 100%;
@@ -222,9 +226,19 @@ article {
     font-size: 0.87rem;
     box-shadow: none;
     padding: 0 15px;
+    span{
+      display: inline-block;
+      margin-left: 1rem;
+      >span{margin-left: 0;}
+      @media #{$small-and-down} {margin-left: 0.867rem;}
+      @media only screen and (max-width: 380px) {
+        >span{display: none;}
+      }
+    }
     &:hover, &.active {
       background-color: color("afk", "light-blue");
       color: #ffffff;
+      .divider {display: none;}
       &:after{
         content:"";
         height: 1px;
@@ -234,11 +248,23 @@ article {
         bottom: -1px;
         background-color: color("afk", "light-blue");
       }
-      .icon-down-open-1{display: inline-block;}
-      .icon-menu{display: none;}
+      .icon-down-open-1 {display: inline-block;}
+      .icon-menu {display: none;}
     }
-    i{width: 1.5rem;}
-    .icon-down-open-1{font-size: 1rem; display: none;}
+    i{font-size: 0.8rem;}
+    .icon-menu{
+      &:before{line-height: 41px;}
+    }
+    .icon-down-open-1{display: none;}
+    .divider {
+      position: absolute;
+      width: 1px;
+      height: auto;
+      right:0;
+      top: 7px;
+      bottom: 7px;
+      background-color: lightgrey;
+    }
   }
   .dropdown-button.btn {
     @media only screen and (max-width: 480px) {display: none;}
@@ -257,13 +283,15 @@ article {
     line-height: 22px;
   }
   .side-nav{
-    top: 97px;
+    top: 85px;
     width: 100%;
     background-color: transparent;
     .menu-content {
       background-color: #ffffff; width: 80%;
-      height: 480px;
       overflow: scroll;
+      position: absolute;
+      top: 43px;
+      bottom: 0;
     }
     .slide-nav-menu {
       width: 100%;
@@ -314,11 +342,18 @@ article {
   .dropdown-content{
     width: 100%;
     margin-top: 1px;
-
+    overflow: hidden;
+    .level-1 > li {
+      height: auto;
+      a{padding: 0.5rem 0;}
+    }
     @media only screen and (max-width: 480px) {
       width: 85% !important;
     }
-
+    .container{
+      overflow: scroll;
+      max-height: 650px;
+    }
     .container-flex{
       @media #{$small-and-down} {
         flex-direction: column;
@@ -344,6 +379,7 @@ article {
       @media #{$small-and-down} {
         width: 100%;
         border-bottom: 1px dotted color("afk", "light-grey");
+        padding-bottom: 28px;
         &:after {
           display: none;
         }
@@ -354,7 +390,7 @@ article {
     .menu-right {
       width: 30%;
       position: relative;
-
+      padding-left: 24px;
       .title{
         @media #{$small-and-down} {
           width: 100%;
@@ -386,58 +422,84 @@ article {
 
   .top-menu.right{
     a{
-      > i{font-size: 1rem;}
+      &:hover{background: none;}
+      > i{
+        font-size: 1rem;
+        &.icon-fire-2{font-size: 1.133rem;}
+        &.icon-truck-1{font-size: 1.067rem;}
+        @media only screen and (max-width: 601px) {
+          font-size: 1.133rem;
+          &.icon-truck-1{font-size: 1.133rem;}
+        }
+      }
       > span{
-        @media #{$small-and-down} {
+        @media only screen and (max-width: 601px) {
           display: none;
         }
       }
-      @media #{$extra-small-and-down} {
-        display: none;
-      }
       @media #{$small-and-down} {
-        padding: 0 10px;
+        padding: 0 0.5rem;
+      }
+      @media only screen and (max-width: 601px) {
+        padding: 0 0.79rem;
       }
     }
   }
 }
+
+//----------------- CONTENT -------------------//
 .banner-main {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 250px;
   overflow: hidden;
   border-bottom: 1px solid color("afk", "orange");
+  @media only screen and (max-width: 480px) and (min-width: 380px) {height: 160px;}
+  @media #{$small-and-up} {height: 300px;}
   .banner-title{
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     text-align: center;
-    padding: 3.7rem 15% 0;
+    padding: 2.93rem 50px 0;
     pointer-events: none;
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 480px) and (min-width: 380px) {
       padding: 0;
       height: 90px;
-      top: 30%;
+      top: 35px;
+    }
+    @media only screen and (max-width: 380px) {top: 30px; padding: 0;}
+    @media #{$small-and-up} {
+      padding: 3.7rem 15% 0;
     }
   }
   .logo{
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     vertical-align: middle;
-    @media only screen and (max-width: 480px) {
+    img{max-width: 210px; width: 100%;}
+    @media only screen and (max-width: 480px) and (min-width: 380px) {
       width: 48%;
       margin: 0;
-      padding: 19px 10px 0 0;
+      padding: 12px 10px 0;
+      img{max-width: 180px;}
     }
-    img{max-width: 100%;}
+    @media only screen and (max-width: 380px) {
+      img{max-width: 180px;}
+    }
+    @media #{$small-and-up} {margin-bottom: 3rem;}
   }
   h1{
-    margin-top: 2.33rem;
-    font-size: 2.07rem;
+    margin-top: 2rem;
+    font-size: 1.933rem;
     font-family: $font-5;
     vertical-align: middle;
-    @media only screen and (max-width: 480px) {
+    @media #{$small-and-up} {
+      margin-top: 2.33rem;
+      font-size: 2.07rem;
+    }
+    @media only screen and (max-width: 480px) and (min-width: 380px) {
       width: 48%;
       margin: 0;
       font-size: 1.33rem;
@@ -445,7 +507,7 @@ article {
     }
   }
   .divider{
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 480px) and (min-width: 380px) {
       position: absolute;
       display: inline-block;
       height: auto;
