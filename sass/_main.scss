@@ -427,9 +427,11 @@ article {
         font-size: 1rem;
         &.icon-fire-2{font-size: 1.133rem;}
         &.icon-truck-1{font-size: 1.067rem;}
+        &.icon-thumbs-up-alt:before {transform: translateY(-2px);}
         @media only screen and (max-width: 601px) {
           font-size: 1.133rem;
           &.icon-truck-1{font-size: 1.133rem;}
+          &.icon-thumbs-up-alt:before {transform: translateY(0px);}
         }
       }
       > span{
@@ -536,6 +538,47 @@ article {
     @media only screen and (max-width: 480px) {
       width: 100%;
     }
+  }
+}
+.afk-accordion {
+  &.collapsible {
+    border-radius: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  .collapsible-header{
+    position: relative;
+    font-size: 1.1333rem;
+    color: color("afk", "light-green");
+    padding-right: 0;
+    text-transform: uppercase;
+    min-height: unset;
+    line-height: 2rem;
+    border-bottom: 1px solid color("afk", "light-green");
+    &:after{
+      content: '\e932';
+      font-family: myfontello;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+  }
+  li{
+    &.active {
+      .collapsible-header {
+        &:after{content: '\e931'}
+      }
+      .collapsible-body {
+        border-bottom: 1px solid color("afk", "light-green");
+      }
+    }
+  }
+  .collapsible-body {
+    border: none;
   }
 }
 
