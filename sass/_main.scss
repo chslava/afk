@@ -1,17 +1,8 @@
-@import "components/variables";
-@import "fonts";
-@import "components/color";
 // Helpers
 .relative {position: relative;}
 .v-split:after {
   content:"|";
   padding: 0 8px;
-}
-.z-depth-1 {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-.z-depth-2 {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 .container-fluid{
   width: 100%;
@@ -477,24 +468,24 @@ article {
     right: 0;
     top: 0;
     text-align: center;
-    padding: 2.93rem 50px 0;
+    padding: 4% 50px 0;
     pointer-events: none;
-    @media only screen and (max-width: 480px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 380px) {
       padding: 0;
       height: 90px;
       top: 35px;
     }
     @media only screen and (max-width: 380px) {top: 30px; padding: 0;}
     @media #{$small-and-up} {
-      padding: 3.7rem 15% 0;
+      padding: 4% 10% 0;
     }
   }
   .logo{
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 4%;
     vertical-align: middle;
     img{max-width: 210px; width: 100%;}
-    @media only screen and (max-width: 480px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 380px) {
       width: 48%;
       margin: 0;
       padding: 12px 10px 0;
@@ -503,18 +494,18 @@ article {
     @media only screen and (max-width: 380px) {
       img{max-width: 180px;}
     }
-    @media #{$small-and-up} {margin-bottom: 3rem;}
+    //@media #{$small-and-up} {margin-bottom: 3rem;}
   }
   h1{
-    margin-top: 2rem;
+    margin-top: 4%;
     font-size: 1.933rem;
     font-family: $font-5;
     vertical-align: middle;
     @media #{$small-and-up} {
-      margin-top: 2.33rem;
+      //margin-top: 2.33rem;
       font-size: 2.07rem;
     }
-    @media only screen and (max-width: 480px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 380px) {
       width: 48%;
       margin: 0;
       font-size: 1.33rem;
@@ -522,7 +513,7 @@ article {
     }
   }
   .divider{
-    @media only screen and (max-width: 480px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 380px) {
       position: absolute;
       display: inline-block;
       height: auto;

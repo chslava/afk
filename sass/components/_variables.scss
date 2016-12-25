@@ -30,9 +30,6 @@
 //  24. Progress Bar
 
 
-@import "color";
-@import "../fonts";
-
 // 1. Colors
 // ==========================================================================
 
@@ -45,7 +42,7 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
-$plain-text-color: color("afk", "gray");
+$plain-text-color: color("afk", "grey");
 $ligth-text-color: #ffffff;
 $label1-text-color: color("afk", "blue");
 $label2-text-color: color("afk", "light-blue");
