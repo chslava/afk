@@ -243,8 +243,8 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 42px !default;
-$navbar-height-mobile: 42px !default;
+$navbar-height: 41px !default;
+$navbar-height-mobile: 41px !default;
 $navbar-font: $font-base;
 $navbar-font-size: 0.87rem !default;
 $navbar-font-color: color("afk", "light-blue") !default;
@@ -351,5 +351,10 @@ $progress-bar-color: $secondary-color !default;
 // Dimensions
 // =============================================
 $header-hight: 64px;
-$header-hight-mobile: 52px;
+$header-hight-mobile: 51px;
 $border-rad: 3px;
+$main-banner-height-l: 375px;
+$main-banner-height-m: 300px;
+$main-banner-height-s: 225px;
+$main-banner-height-xs: 252px;
+

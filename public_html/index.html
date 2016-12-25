@@ -21,11 +21,11 @@
 <div class="header">
     <div class="container">
         <div class="row relative">
-            <div class="col xs3 s3 m5">
+            <div class="col xs3 s3 m5 l6">
                 <img class="logo left" src="styles/img/AFK_Logo@2x.png" alt="">
                 <div class="title hide-on-med-and-down"><h1>Оптовый магазин детских товаров</h1></div>
             </div>
-            <div class="col xs9 s9 m7">
+            <div class="col xs9 s9 m7 l6">
                 <form action="">
                     <div class="input-field search">
                         <input name="search" placeholder="Я ищу..." id="header-search" type="text">
@@ -176,11 +176,10 @@
 <!-- CONTENT -->
 <div class="content">
     <div class="banner-main">
-        <div class="carousel carousel-slider">
-            <a class="carousel-item" href="#one!"><div style="background-image: url('media/banners/TopBaner-100.jpg');"></div></a>
-            <a class="carousel-item" href="#two!"><div style="background-image: url('media/banners/TopBaner-100.jpg');"></div></a>
-            <a class="carousel-item" href="#thre!"><div style="background-image: url('media/banners/TopBaner-100.jpg');"></div></a>
-        </div>
+        <ul id="main-slider">
+            <li><img src="media/banners/TopBaner-100.jpg"/></li>
+            <li><img src="media/banners/TopBaner-100.jpg"/></li>
+        </ul>
         <div class="banner-title">
             <div class="container">
                 <div class="logo"><img src="styles/img/AFK_Logo@2x.png" alt=""></div>
@@ -206,10 +205,10 @@
                     <h1 class="color-2">Наши предложения и сервисы</h1>
                 </div>
                 <div class="container-flex">
-                    <div class="sticker bg-color-3 z-depth-1"><img src="media/buy1.svg" alt=""></div>
-                    <div class="sticker bg-color-4 z-depth-1"><img src="media/DropShipping.svg" alt=""></div>
-                    <div class="sticker bg-color-1 z-depth-1"><img src="media/back.svg" alt=""></div>
-                    <div class="sticker bg-color-2 z-depth-1"><img src="media/obmen.svg" alt=""></div>
+                    <div class="sticker bg-color-3"><img src="media/buy1.svg" alt=""></div>
+                    <div class="sticker bg-color-4"><img src="media/DropShipping.svg" alt=""></div>
+                    <div class="sticker bg-color-1"><img src="media/back.svg" alt=""></div>
+                    <div class="sticker bg-color-2"><img src="media/obmen.svg" alt=""></div>
                 </div>
             </article>
         </div>
@@ -234,6 +233,8 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bin/materialize.js"></script>
+<script type="text/javascript" src="js/bin/jquery.bxslider.min.js"></script>
+
 <script type="text/javascript">
     $(document).on('ready', function(){
         $('.button-collapse').sideNav({
@@ -242,7 +243,11 @@
                     draggable: true // Choose whether you can drag to open on touch screens
                 }
         );
-        $('.carousel.carousel-slider').carousel({full_width: true});
+        $('#main-slider').bxSlider({
+            pager: false,
+            controls: false,
+//            adaptiveHeight: true
+        });
     });
 </script>
 </body>
