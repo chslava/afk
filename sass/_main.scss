@@ -469,7 +469,7 @@ article {
     text-align: center;
     padding: 4% 50px 0;
     pointer-events: none;
-    @media only screen and (max-width: 662px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 381px) {
       padding: 0;
       height: 90px;
       top: 35px;
@@ -484,7 +484,7 @@ article {
     margin-bottom: 4%;
     vertical-align: middle;
     img{max-width: 210px; width: 100%;}
-    @media only screen and (max-width: 662px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 381px) {
       width: 48%;
       margin: 0;
       padding: 12px 10px 0;
@@ -504,7 +504,7 @@ article {
       //margin-top: 2.33rem;
       font-size: 2.07rem;
     }
-    @media only screen and (max-width: 662px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 381px) {
       width: 48%;
       margin: 0;
       font-size: 1.33rem;
@@ -512,7 +512,7 @@ article {
     }
   }
   .divider{
-    @media only screen and (max-width: 662px) and (min-width: 380px) {
+    @media only screen and (max-width: 662px) and (min-width: 381px) {
       position: absolute;
       display: inline-block;
       height: auto;
