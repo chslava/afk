@@ -5,46 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" type="text/css" href="styles/css/style.css">
-    <!--<link rel="stylesheet" type="text/css" href="styles/css/materialize.css">-->
 
 </head>
 <body>
 <div class="container">
-    <div class="row header-top">
-        <div class="col s12">
-            <span><i class="icon-mail-alt"></i>info@afk.kiev.ua</span>
-            <i class="v-split"></i><span><i class="icon-phone"></i>+380 (44) 406-60-98</span>
-            <span><i class="v-split"></i><span><i class="icon-clock-1"></i>Пн-Пт, 9:00-19:00</span></span>
-        </div>
+    <div class="header-top info-block">
+        <span><i class="icon-mail-alt"></i>info@afk.kiev.ua</span>
+        <i class="v-split"></i><span><i class="icon-phone"></i>+380 (44) 406-60-98</span>
+        <span><i class="v-split"></i><span><i class="icon-clock-1"></i>Пн-Пт, 9:00-19:00</span></span>
     </div>
 </div>
 <div class="header">
     <div class="container">
-        <div class="row relative">
-            <!--<div class="col xs3 s3 m5 l6">-->
-                <!--<img class="logo left" src="styles/img/AFK_Logo@2x.png" alt="">-->
-                <!--<div class="title hide-on-med-and-down"><h1>Оптовый магазин детских товаров</h1></div>-->
-            <!--</div>-->
-            <!--<div class="col xs9 s9 m7 l6">-->
-                <!--<form action="">-->
-                    <!--<div class="input-field search">-->
-                        <!--<input name="search" placeholder="Я ищу..." id="header-search" type="text">-->
-                        <!--<button class="btn-search"></button>-->
-                    <!--</div>-->
-                <!--</form>-->
-                <!--<div class="login">-->
-                    <!--<img src="styles/img/man.svg" alt="">-->
-                    <!--<span><a href="#">Вход</a><i class="v-split"></i><a href="#">Регистрация</a></span>-->
-                    <!--<i class="icon-down-open-1"></i>-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="col xs12">
-                <div class="left"><img class="logo" src="styles/img/AFK_Logo@2x.png" alt=""></div>
-                <div class="left" style="display: table-cell; vertical-align: middle; text-align: center;"><h1>Оптовый магазин детских товаров</h1></div>
-                <div class="right"><span><a href="#">Вход</a><i class="v-split"></i><a href="#">Регистрация</a></span></div>
-                <div class="relative right"><div style="position: absolute; left: 0; right: 0; text-align: center;">Search</div></div>
-            </div>
+        <div class="left"><img class="logo" src="styles/img/AFK_Logo@2x.png" alt=""></div>
+        <div class="title"><h1>Оптовый магазин детских товаров</h1></div>
+        <div class="login">
+            <img src="styles/img/man.svg" alt="">
+            <span><a href="#">Вход</a><i class="v-split"></i><a href="#">Регистрация</a></span>
+            <i class="icon-down-open-1"></i>
         </div>
+        <form action="">
+            <div class="input-field search">
+                <input name="search" placeholder="Я ищу..." id="header-search" type="text">
+                <button class="btn-search"></button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -179,7 +164,9 @@
         </div>
     </div>
 </nav>
+
 <!-- CONTENT -->
+
 <div class="content">
     <div class="banner-main">
         <ul id="main-slider">
@@ -187,11 +174,11 @@
             <li><img src="media/banners/TopBaner-100.jpg"/></li>
         </ul>
         <div class="banner-title">
-            <div class="container">
+            <diw class="wrapper">
                 <div class="logo"><img src="styles/img/AFK_Logo@2x.png" alt=""></div>
                 <div class="divider"></div>
                 <h1>Дистрибьюция детских товаров</h1>
-            </div>
+            </diw>
         </div>
     </div>
     <div class="container">
@@ -218,7 +205,7 @@
                 </div>
             </article>
         </div>
-        <article>
+        <article class="last">
             <div class="wrapper">
                 <ul class="afk-accordion collapsible" data-collapsible="accordion">
                     <li>
@@ -232,6 +219,49 @@
                 </ul>
             </div>
         </article>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-mobile">
+        <div class="container">
+            <div class="info-block">
+                <span><i class="icon-mail-alt"></i><a href="#">info@afk.kiev.ua</a></span>
+                <span><i class="icon-phone"></i>+380 (44) 406-60-98</span>
+                <span><i class="icon-clock-1"></i>Пн-Пт, 9:00-19:00</span>
+            </div>
+            <ul class="afk-accordion collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">Карта сайта</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">О производителях</div>
+                    <div class="collapsible-body">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">AFK Distribution</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Помощь</div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Язык<span>Русский</span></div>
+                    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <span>&copy; AFK Distribution, 2016</span>
     </div>
 </div>
 
@@ -252,7 +282,6 @@
         $('#main-slider').bxSlider({
             pager: false,
             controls: false,
-//            adaptiveHeight: true
         });
     });
 </script>
