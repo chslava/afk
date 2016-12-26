@@ -33,7 +33,7 @@
   flex-grow: 1;
   img {max-height: 100%;}
   &:hover {
-    @extend .z-depth-2;
+    @extend .z-depth-1;
   }
 }
 .color-1 {color: color("afk", "magento");}
@@ -68,8 +68,9 @@ article {
 
 //----------------- HEADER TOP-------------------//
 .info-block{
-  color: $label1-text-color;
+  color: color("afk", "light-blue");
   font-size: 15px;
+  font-weight: bold;
   text-align: left;
 }
 .header-top {
@@ -220,7 +221,7 @@ article {
     border-radius: 0;
     height: 100%;
     background: none;
-    color: color("afk", "blue");
+    color: color("afk", "light-blue");
     font-size: 0.87rem;
     box-shadow: none;
     padding: 0 15px;
@@ -423,6 +424,8 @@ article {
   .top-menu.right{
     a{
       line-height: normal;
+      height: 40px;
+      &:hover {background-color: color("afk", "extra-light-blue-2")}
       > i{
         font-size: 1rem;
         &.icon-fire-2{font-size: 1.133rem;}
@@ -576,15 +579,13 @@ article {
   li{
     &.active {
       .collapsible-header {
+        border-bottom: none;
         &:after{content: '\e931'}
-      }
-      .collapsible-body {
-        border-bottom: 1px solid color("afk", "light-green");
       }
     }
   }
   .collapsible-body {
-    border: none;
+    border-bottom: 1px solid color("afk", "light-green");
   }
 }
 article {
@@ -592,11 +593,10 @@ article {
 }
 
 //----------------- FOOTER -------------------//
-
+.footer {background-color: color("afk", "extra-light-grey");}
 .footer-mobile {
   padding-top: 38px;
   border-top: 2px solid #cacaca;
-  background-color: color("afk", "extra-light-grey");
   .info-block {
     font-size: 17px;
     line-height: 33px;
@@ -608,6 +608,7 @@ article {
     }
     span {display: block;}
     a{
+      color: color("afk", "light-blue");
       text-decoration: underline;
       font-size: inherit;
     }
@@ -623,13 +624,9 @@ article {
       text-transform: none;
       border-color: #c9c9c9;
       padding-left: 0;
+      background-color: inherit;
     }
     li{
-      &.active {
-        .collapsible-body {
-          border-color: #c9c9c9;
-        }
-      }
       &:last-child {
         .collapsible-header, .collapsible-body {border: none;}
       }
@@ -638,6 +635,7 @@ article {
     .collapsible-body {
       padding-bottom: 10px;
       padding-left: 10px;
+      border-color: #c9c9c9;
       p {padding: 0;}
     }
   }
