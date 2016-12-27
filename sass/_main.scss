@@ -343,16 +343,20 @@ article {
   .dropdown-content{
     width: 100%;
     margin-top: 1px;
-    overflow: hidden;
+    //overflow-y: hidden;
+    //overflow-x: hidden;
+    z-index: 11;
+    outline: 9999px solid rgba(0,0,0,0.5);
     .level-1 > li {
       height: auto;
+      width: 95%;
       a{padding: 0.5rem 1rem;}
     }
     @media only screen and (max-width: 480px) {
       width: 85% !important;
     }
     .container{
-      overflow: scroll;
+      overflow-y: auto;
       max-height: 650px;
     }
     .container-flex{
@@ -408,6 +412,7 @@ article {
       color: color("afk", "light-grey");
       font-size: 20px;
       cursor: pointer;
+      z-index: 10;
     }
 
     li {
@@ -471,7 +476,7 @@ article {
     vertical-align: middle;
     pointer-events: none;
     padding: 0 10%;
-    @media only screen and (max-width: 380px) {top: 30px; padding: 0 20px;}
+    @media only screen and (max-width: 480px) {padding: 0 20px;}
     @media #{$small-and-up} {
       padding: 0 10%;
     }
