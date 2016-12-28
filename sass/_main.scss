@@ -598,9 +598,9 @@ article {
 }
 
 //----------------- FOOTER -------------------//
-.footer {background-color: color("afk", "extra-light-grey");}
-.footer-mobile {
-  padding-top: 38px;
+.footer {
+  width: 100%;
+  background-color: color("afk", "extra-light-grey");
   border-top: 2px solid #cacaca;
   .info-block {
     font-size: 17px;
@@ -618,7 +618,12 @@ article {
       font-size: inherit;
     }
   }
-
+}
+.footer-mobile {
+  padding-top: 38px;
+  @media #{$small-and-up} {
+    display: none;
+  }
   .afk-accordion {
     .collapsible-header, .collapsible-body {
       color: color("afk", "light-grey-2");
@@ -630,6 +635,15 @@ article {
       border-color: #c9c9c9;
       padding-left: 0;
       background-color: inherit;
+      overflow: hidden;
+      .icon-globe {
+        display: inline;
+        width: auto;
+        font-size: 17px;
+        line-height: 32px;
+        margin-right: 5px;
+        &:before{margin: 0;}
+      }
     }
     li{
       &:last-child {
@@ -641,7 +655,66 @@ article {
       padding-bottom: 10px;
       padding-left: 10px;
       border-color: #c9c9c9;
-      p {padding: 0;}
+      a {
+        display: block;
+        font-size: 0.933rem;;
+        line-height: 20px;
+        color: color("afk", "light-grey-2");
+        padding: 0;
+      }
+    }
+  }
+}
+.footer-main {
+  padding: 20px 0 25px;
+  color: color("afk", "light-grey-2");
+  @media #{$small-and-down} {
+    display: none;
+  }
+  .row {
+    @media #{$medium-and-up} {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  .info-block {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 20px;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 0;
+  }
+  li {
+    width: 25%;
+    border-left: 1px solid #c9c9c9;
+    padding-left: 8px;
+    padding-right: 8px;
+    a {
+      display: block;
+      font-size: 11px;
+      line-height: 20px;
+      color: color("afk", "light-grey-2");
+    }
+    &.lang {
+     a {
+       position: relative;
+       padding-left: 15px;
+       &.active:before {
+         content: '\e923';
+         font-family: myfontello;
+         font-size: 12px;
+         position: absolute;
+         left: 0;
+       }
+     }
     }
   }
 }
