@@ -476,6 +476,13 @@ article {
   max-height: 375px;
   overflow: hidden;
   border-bottom: 1px solid color("afk", "orange");
+  .banner-mobile {
+    height: 252px;
+    width: 100%;
+    background: url("../../media/banners/TopBaner-380.jpg");
+    background-size: cover;
+    @media only screen and (min-width: 381px) {display:none;}
+  }
   .banner-title{
     display: flex;
     justify-content: center;
@@ -544,6 +551,7 @@ article {
 }
 
 #main-slider {
+  @media only screen and (max-width: 380px) {display:none;}
   li {
     img {
       width: 100%;
