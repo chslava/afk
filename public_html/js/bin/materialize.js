@@ -704,6 +704,7 @@ if (jQuery) {
 
 
         // Show dropdown
+        toggleElement();
         activates.stop(true, true).css('opacity', 0)
           .slideDown({
             queue: false,
@@ -722,13 +723,18 @@ if (jQuery) {
         activates.fadeOut(curr_options.outDuration);
         activates.removeClass('active');
         origin.removeClass('active');
+        toggleElement();
         setTimeout(function() { activates.css('max-height', ''); }, curr_options.outDuration);
       }
 
       function toggleElement() {
-          var element = curr_options.toggleElement;
-          if (element) {
-              $(element).toggleClass('active');
+          var element = $(curr_options.toggleElement);
+          if (element.length) {
+              if (element.hasClass('active')){
+                  element.removeClass('active');
+              } else {
+                  element.addClass('active');
+              }
           }
       }
 
@@ -799,11 +805,9 @@ if (jQuery) {
       // Listen to open and close event - useful for select component
       origin.on('open', function(e, eventType) {
         placeDropdown(eventType);
-        toggleElement;
       });
       origin.on('close', function () {
           hideDropdown;
-          toggleElement;
       });
 
 
