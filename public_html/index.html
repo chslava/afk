@@ -8,11 +8,14 @@
 
 </head>
 <body>
-<div class="container">
-    <div class="header-top info-block">
-        <span><i class="icon-mail-alt"></i>info@afk.kiev.ua</span>
-        <i class="v-split"></i><span><i class="icon-phone"></i>+380 (44) 406-60-98</span>
-        <span><i class="v-split"></i><span><i class="icon-clock-1"></i>Пн-Пт, 9:00-19:00</span></span>
+<div class="overlay"></div>
+<div class="header-top">
+    <div class="container">
+        <div class="info-block">
+            <span><i class="icon-mail-alt"></i>info@afk.kiev.ua</span>
+            <i class="v-split"></i><span><i class="icon-phone"></i>+380 (44) 406-60-98</span>
+            <span><i class="v-split"></i><span><i class="icon-clock-1"></i>Пн-Пт, 9:00-19:00</span></span>
+        </div>
     </div>
 </div>
 <div class="header">
@@ -32,7 +35,6 @@
         </form>
     </div>
 </div>
-
 <nav id="top-nav">
     <div class="nav-wrapper container">
         <div class="row">
@@ -40,6 +42,7 @@
             <a class='dropdown-button btn left' href='#'
                data-activates="catalog-0"
                data-fullwidth="true"
+               data-toggleelement=".overlay"
                data-constrainwidth="false"
                data-beloworigin="true"
                data-hover="false"
@@ -164,7 +167,6 @@
         </div>
     </div>
 </nav>
-
 <!-- CONTENT -->
 
 <div class="content">
@@ -192,7 +194,9 @@
                 </div>
             </div>
         </article>
-        <div class="offers">
+    </div>
+    <div class="offers">
+        <div class="container">
             <article>
                 <div class="wrapper">
                     <h1 class="color-2">Наши предложения и сервисы</h1>
@@ -205,6 +209,8 @@
                 </div>
             </article>
         </div>
+    </div>
+    <div class="container">
         <article class="last">
             <div class="wrapper">
                 <ul class="afk-accordion collapsible" data-collapsible="accordion">

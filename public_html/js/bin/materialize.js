@@ -586,6 +586,8 @@ if (jQuery) {
           curr_options.stopPropagation = origin.data('stoppropagation');
         if (origin.data('fullwidth') !== undefined)
           curr_options.fullWidth = origin.data('fullwidth');
+        if (origin.data('toggleelement') !== undefined)
+          curr_options.toggleElement = origin.data('toggleelement');
       }
 
       updateOptions();
@@ -723,6 +725,13 @@ if (jQuery) {
         setTimeout(function() { activates.css('max-height', ''); }, curr_options.outDuration);
       }
 
+      function toggleElement() {
+          var element = curr_options.toggleElement;
+          if (element) {
+              $(element).toggleClass('active');
+          }
+      }
+
       // Hover
       if (curr_options.hover) {
         var open = false;
@@ -790,8 +799,12 @@ if (jQuery) {
       // Listen to open and close event - useful for select component
       origin.on('open', function(e, eventType) {
         placeDropdown(eventType);
+        toggleElement;
       });
-      origin.on('close', hideDropdown);
+      origin.on('close', function () {
+          hideDropdown;
+          toggleElement;
+      });
 
 
     });

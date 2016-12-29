@@ -24,6 +24,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.overlay {
+  display: none;
+  position: fixed;
+  background-color: color("afk", "overlay");
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  &.active {display: block;}
+}
 .sticker {
   display: inline-block;
   border-radius: 4px;
@@ -74,7 +85,10 @@ article {
   text-align: left;
 }
 .header-top {
-  &.info-block {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 999;
+  .info-block {
     height: 33px;
     span{line-height: 33px;}
     @media only screen and (max-width: 601px) {
@@ -96,6 +110,7 @@ article {
   background-color: $primary-color;
   padding-top: 13px;
   padding-bottom: 13px;
+  z-index: 999;
   @media only screen and (max-width: 481px) {
     height: $header-hight-mobile;
     padding-top: 9px;
@@ -343,13 +358,14 @@ article {
   .dropdown-content{
     width: 100%;
     margin-top: 1px;
-    z-index: 11;
-    outline: 9999px solid rgba(0,0,0,0.5);
     .level-1 > li {
       height: auto;
       width: 95%;
       a{padding: 0.5rem 1rem;}
     }
+    //&.active {
+    //  +.overlay{display: block;}
+    //}
     @media only screen and (max-width: 480px) {
       width: 85% !important;
     }
@@ -584,13 +600,12 @@ article {
   li{
     &.active {
       .collapsible-header {
-        border-bottom: none;
         &:after{content: '\e931'}
       }
     }
   }
   .collapsible-body {
-    border-bottom: 1px solid color("afk", "light-green");
+    border: none;
   }
 }
 article {
