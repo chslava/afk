@@ -2368,7 +2368,7 @@ $(document).ready(function(){
 
               // If overlay does not exist, create one and if it is clicked, close menu
               if ($overlay.length === 0) {
-                $overlay = $('<div id="sidenav-overlay"></div>');
+                $overlay = $('<div id="sidenav-overlay"><a href="#" class="icon-cancel"></a></div>');
                 $overlay.css('opacity', 0).click( function(){
                   removeMenu();
                 });
@@ -2421,7 +2421,7 @@ $(document).ready(function(){
           }).bind('panend', function(e) {
 
             if (e.gesture.pointerType == "touch") {
-              var $overlay = $('<div id="sidenav-overlay"></div>');
+              var $overlay = $('<div id="sidenav-overlay"><a href="#" class="icon-cancel"></a></div>');
               var velocityX = e.gesture.velocityX;
               var x = e.gesture.center.x;
               var leftPos = x - options.menuWidth;
@@ -2503,7 +2503,7 @@ $(document).ready(function(){
 
             // Disable Scrolling
             var $body = $('body');
-            var $overlay = $('<div id="sidenav-overlay"></div>');
+            var $overlay = $('<div id="sidenav-overlay"><a href="#" class="icon-cancel"></a></div>');
             var oldWidth = $body.innerWidth();
             $body.css('overflow', 'hidden');
             $body.width(oldWidth);
@@ -2531,7 +2531,7 @@ $(document).ready(function(){
                 } });
 
             });
-            $('body').append($overlay);
+            $('#top-nav').append($overlay);
             $overlay.velocity({opacity: 1}, {duration: 300, queue: false, easing: 'easeOutQuad',
               complete: function () {
                 menuOut = true;

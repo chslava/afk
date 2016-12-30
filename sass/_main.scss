@@ -24,6 +24,28 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+#sidenav-overlay{
+  width: 100%;
+  top: 84px;
+  right: 0;
+  left: auto;
+  z-index: 996;
+  .icon-cancel{
+    position: absolute;
+    right: 0;
+    width: 20%;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    color: #ffffff;
+    text-align: right;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    &:before {margin: 0 auto; width: 100%;}
+  }
+}
 .overlay {
   display: none;
   position: fixed;
@@ -86,8 +108,12 @@ article {
 }
 .header-top {
   position: relative;
+  width: 100%;
   background-color: #ffffff;
   z-index: 999;
+  @media only screen and (max-width: 480px) {
+    position: fixed;
+  }
   .info-block {
     height: 33px;
     span{line-height: 33px;}
@@ -111,7 +137,9 @@ article {
   padding-top: 13px;
   padding-bottom: 13px;
   z-index: 999;
-  @media only screen and (max-width: 481px) {
+  @media only screen and (max-width: 480px) {
+    position: fixed;
+    top: 33px;
     height: $header-hight-mobile;
     padding-top: 9px;
     padding-bottom: 9px;
@@ -229,6 +257,10 @@ article {
   position: relative;
   z-index: 999;
   border-bottom: 1px solid color("afk", "orange");
+  @media only screen and (max-width: 480px) {
+    position: fixed;
+    top: 84px;
+  }
   i{
     display: inline-block;
     vertical-align: middle;
@@ -302,12 +334,15 @@ article {
   }
   .side-nav{
     top: 84px;
-    width: 100%;
+    width: 80%;
     background-color: transparent;
     .menu-content {
-      background-color: #ffffff; width: 80%;
+      position: fixed;
+      z-index: 10001;
+      background-color: #ffffff;
+      width: 100%;
       overflow: scroll;
-      position: absolute;
+      //position: absolute;
       top: 41px;
       bottom: 0;
     }
@@ -325,7 +360,7 @@ article {
         text-align: left;
         margin: 0;
         height: 41px;
-        width: 80%;
+        width: 100%;
         background-color: color("afk", "light-blue");
         border-radius: 0;
         font-size: 0.87rem;
@@ -339,17 +374,6 @@ article {
         font-size: 0.87rem;
         line-height: 40px;
         margin-right: 13px;
-      }
-      .icon-cancel {
-        height: 41px;
-        width: 20%;
-        color: #ffffff;
-        background-color: color("afk", "overlay");
-        font-size: 20px;
-        float: left;
-        padding: 0;
-        margin: 0;
-        &:before {margin: 0 auto; width: 100%;}
       }
     }
     .title {
@@ -471,6 +495,9 @@ article {
 }
 
 //----------------- CONTENT -------------------//
+.content{
+  @media only screen and (max-width: 480px) {padding-top: 108px;}
+}
 .banner-main {
   position: relative;
   width: 100%;
