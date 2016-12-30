@@ -440,6 +440,7 @@ article {
       }
       @media #{$small-and-down} {
         width: 100%;
+        padding-left: 0;
       }
     }
     .icon-cancel {
